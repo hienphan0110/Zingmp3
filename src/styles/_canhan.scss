@@ -1,0 +1,127 @@
+.ca-nhan {
+  width: calc(100% - 600px);
+  position: relative;
+  margin: 0 auto;
+  padding: 106px 0;
+  .info {
+    text-align: center;
+    .avatar {
+      width: 95px;
+      height: 95px;
+      border-radius: 50px;
+    }
+    .title {
+      color: $text;
+      font-size: 36px;
+      font-weight: 600;
+      margin-top: 18px;
+    }
+  }
+  .menu__music {
+    margin-top: 52px;
+    &-list {
+      //   display: flex;
+      //   justify-content: center;
+      .menu {
+        display: flex;
+        justify-content: center;
+      }
+      .menu-list {
+        background-color: $alpha-bg;
+        display: flex;
+        color: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        .list-item {
+          font-size: 22px;
+          padding: 8px 22px;
+          a {
+            padding: 0 12px;
+          }
+        }
+        .list-item.active {
+          background-color: #a46cf5bf;
+          border-radius: 50px;
+        }
+      }
+      .playlist {
+        .playlist-header {
+          display: flex;
+          color: $text;
+          margin-top: 40px;
+          .header-left {
+            width: 50%;
+            font-size: 20px;
+            padding-left: 15px;
+          }
+          .header-content {
+            width: 50%;
+            font-size: 20px;
+            padding-right: 120px;
+          }
+        }
+        .music-view {
+          .list-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 16px 58px 16px 8px;
+            border-bottom: 1px solid #3c4160;
+            cursor: pointer;
+            align-items: center;
+
+            .details {
+              display: flex;
+              align-items: center;
+              width: 30%;
+
+              .details-img {
+                max-width: 100%;
+                width: 50px;
+                height: 50px;
+                margin-right: 13px;
+                padding: 7px;
+                img {
+                  width: 100%;
+                  border-radius: 5px;
+                }
+              }
+              .details-title {
+                line-height: 22px;
+                color: $text;
+                p {
+                  color: #ccc;
+                }
+              }
+            }
+            .item-content {
+              color: #ccc;
+            }
+            .item-right {
+              color: #ccc;
+              width: 30%;
+              .level {
+                text-align: right;
+                svg {
+                  padding: 0 12px;
+                  cursor: pointer;
+                }
+                .icon-heart {
+                  color: $purple__3;
+                }
+              }
+            }
+          }
+          .list-item.active {
+            background-color: $purple__3;
+            border-radius: 5px;
+            .item-right {
+              .icon-heart {
+                color: #ccc;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

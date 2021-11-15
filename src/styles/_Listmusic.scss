@@ -1,0 +1,56 @@
+.listmusic {
+  @include fixed;
+  width: 300px;
+  right: 0;
+  &__tab {
+    margin: 32px 0;
+    &-item {
+      background-color: $sidebar-bg;
+      border-radius: 50px;
+      padding: 8px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 12px;
+    }
+    .listmusic__tab-item.active {
+      background-color: hsla(0, 0%, 100%, 0.3);
+    }
+  }
+  &__content {
+    cursor: pointer;
+    .song {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      margin: 10px;
+      .details {
+        display: flex;
+        align-items: center;
+        .details-img {
+          max-width: 100%;
+          width: 50px;
+          height: 50px;
+          margin-right: 13px;
+          padding: 7px;
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+        .details-title {
+          line-height: 22px;
+          h3 {
+            font-size: 16px;
+          }
+          p {
+            font-size: 14px;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+    .song.active {
+      background-color: $purple__3;
+    }
+  }
+}

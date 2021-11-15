@@ -1,0 +1,16 @@
+// .header {
+//     background-color: $purple !important;
+// }
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  background-color: $purple !important;
+  width: calc(100% - 540px) !important;
+  right: 60px !important;
+  left: 0 !important;
+  margin: 0 auto;
+  position: fixed !important;
+  z-index: 99;
+}
+.css-96uuyl {
+  width: 40% !important;
+  border-radius: 50px !important;
+}

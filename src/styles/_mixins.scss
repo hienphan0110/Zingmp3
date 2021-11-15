@@ -1,0 +1,19 @@
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// @mixin mmm() {
+//     position: relative;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+@mixin fixed() {
+  background-color: $purple;
+  color: $text;
+  width: 240px;
+  height: 100%;
+  position: fixed;
+}
