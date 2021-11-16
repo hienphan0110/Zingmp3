@@ -5,13 +5,12 @@ import Canhan from "./Canhan";
 import Khampha from "./Khampha";
 import Listmusic from "./Listmusic";
 import Footer from "./Footer";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   const [songs] = useState([
     {
-      id: 1,
       name: "Tự Em Đa Tình",
       singer: "Quinn",
       path: "//mp3-s1-m-zmp3.zadn.vn/6d14322e1868f136a879/2419112025626696242?authen=exp=1637037729~acl=/6d14322e1868f136a879/*~hmac=adb26cb072e539ffbc56ff8807fc3bc0&fs=MTYzNjg2NDkyOTUxM3x3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
@@ -19,8 +18,6 @@ function App() {
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/0/5/d/2/05d288a21458ea7c380c97b4c27aab12.jpg?fs=MTYzNTQyMjIxNjM0MHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
     {
-      id: 2,
-
       name: "Tát Nước Đầu Đình",
       singer: "Lynk Lee, Binz",
       path: "//mp3-s1-m-zmp3.zadn.vn/d47c4eca478eaed0f79f/655168355244407679?authen=exp=1637119296~acl=/d47c4eca478eaed0f79f/*~hmac=00b463c918201ce2fe03e91641ad352f&fs=MTYzNjk0NjQ5Njg5OXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
@@ -66,58 +63,25 @@ function App() {
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
-  // const [song, setSong] = useState("");
-  const [song, setSong] = useState(songs[currentSongIndex]);
-  // console.log(songs[currentSongIndex]);
-
-  // useEffect(() => {
-  //   setNextSongIndex(() => {
-  //     if (currentSongIndex + 1 > songs.length - 1) {
-  //       return 0;
-  //     } else {
-  //       return currentSongIndex + 1;
-  //     }
-  //   });
-  // }, [currentSongIndex]);
-  // Play
-  const audioEl = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [song, setSong] = useState(songs[0]);
 
   useEffect(() => {
-    isPlaying ? audioEl.current.play() : audioEl.current.pause();
-  });
-
-  const handlePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
-  // //////
-  const Skip = (forwards = true) => {
-    if (forwards) {
-      setCurrentSongIndex(() => {
-        let temp = currentSongIndex;
-        temp++;
-        return temp;
-      });
-    } else {
-      setCurrentSongIndex(() => {
-        let temp = currentSongIndex;
-        temp--;
-        return temp;
-      });
-    }
-  };
-
+    setNextSongIndex(() => {
+      if (currentSongIndex + 1 > songs.length - 1) {
+        return 0;
+      } else {
+        return currentSongIndex + 1;
+      }
+    });
+  }, [currentSongIndex]);
   return (
     <BrowserRouter>
       <div className="App">
-        <audio id="audio" src={song.path} ref={audioEl}></audio>
         <Header />
         <Sidebar />
         <Listmusic
           song={song}
           setSong={setSong}
-          isPlaying={isPlaying}
-          handlePlay={handlePlay}
           songs={songs}
           currentSongIndex={currentSongIndex}
           setCurrentSongIndex={setCurrentSongIndex}
@@ -125,13 +89,9 @@ function App() {
         <Footer
           song={song}
           setSong={setSong}
-          isPlaying={isPlaying}
           currentSongIndex={currentSongIndex}
           setCurrentSongIndex={setCurrentSongIndex}
-          // nextSongIndex={nextSongIndex}
           songs={songs}
-          handlePlay={handlePlay}
-          Skip={Skip}
         />
 
         <Switch>
@@ -139,8 +99,6 @@ function App() {
             <Canhan
               song={song}
               setSong={setSong}
-              isPlaying={isPlaying}
-              handlePlay={handlePlay}
               songs={songs}
               currentSongIndex={currentSongIndex}
               setCurrentSongIndex={setCurrentSongIndex}

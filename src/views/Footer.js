@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PlayerDetails from "../components/PlayerDetails";
 import Controls from "../components/controls";
 import { FaFilm, FaMicrophone } from "react-icons/fa";
@@ -6,46 +6,61 @@ import { FaFilm, FaMicrophone } from "react-icons/fa";
 export default function Footer(props) {
   const [percentage, setPercentage] = useState(0);
 
-  const onChange = (e) => {
-    setPercentage(e.target.value);
+  const onChange = () => {
+    // setPercentage(e.target.value);
+    if (audioEl.current.pause()) {
+      console.log(Math.random());
+    }
   };
-  // const SkipSong = (forwards = true) => {
-  //   if (forwards) {
-  //     props.setCurrentSongIndex(() => {
-  //       let temp = props.currentSongIndex;
-  //       temp++;
-  //       if (temp > props.songs.length - 1) {
-  //         temp = 0;
-  //       }
-  //       return temp;
-  //     });
-  //   } else {
-  //     props.setCurrentSongIndex(() => {
-  //       let temp = props.currentSongIndex;
-  //       temp--;
+  const SkipSong = (forwards = true) => {
+    if (forwards) {
+      props.setCurrentSongIndex(() => {
+        let temp = props.currentSongIndex;
+        temp++;
+        if (temp > props.songs.length - 1) {
+          temp = 0;
+        }
+        return temp;
+      });
+    } else {
+      props.setCurrentSongIndex(() => {
+        let temp = props.currentSongIndex;
+        temp--;
 
-  //       if (temp < 0) {
-  //         temp = props.songs.length - 1;
-  //       }
-  //       return temp;
-  //     });
-  //   }
-  // };
+        if (temp < 0) {
+          temp = props.songs.length - 1;
+        }
+        return temp;
+      });
+    }
+  };
+
+  const audioEl = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    isPlaying ? audioEl.current.play() : audioEl.current.pause();
+  });
+  const handlePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="footer">
       <div className="player">
+        <audio id="audio" src={props.song.path} ref={audioEl}></audio>
         <PlayerDetails
           // song={props.song}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
           song={props.song}
-          // setCurrentSongIndex={props.setCurrentSongIndex}
         />
 
         <Controls
-          handlePlay={props.handlePlay}
-          isPlaying={props.isPlaying}
-          setIsPlaying={props.setIsPlaying}
-          // SkipSong={SkipSong}
-          Skip={props.Skip}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          handlePlay={handlePlay}
+          SkipSong={SkipSong}
           onChange={onChange}
           percentage={percentage}
         />

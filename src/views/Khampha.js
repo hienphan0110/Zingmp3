@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import MusicItemView from "../components/MusicItemView";
-import MusicRadio from "../components/MusicRadio";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

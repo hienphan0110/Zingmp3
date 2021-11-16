@@ -11,17 +11,13 @@ export default function Controls(props) {
         <div className="btn">
           <FaRandom />
         </div>
-        <div className="btn btn-skip" onClick={() => props.Skip(false)}>
+        <div className="btn btn-skip" onClick={() => props.SkipSong(false)}>
           <FaArrowLeft />
         </div>
-        <div
-          className="btn btn-play"
-          onClick={props.handlePlay}
-          // onTimeUpdate={HandlePlay}
-        >
+        <div className="btn btn-play" onClick={props.handlePlay}>
           <FontAwesomeIcon icon={props.isPlaying ? faPause : faPlay} />
         </div>
-        <div className="btn btn-skip" onClick={() => props.Skip()}>
+        <div className="btn btn-skip" onClick={() => props.SkipSong()}>
           <FaArrowRight />
         </div>
         <div className="btn">
@@ -30,6 +26,7 @@ export default function Controls(props) {
       </div>
       <div className="progresss">
         <input
+          // onTimeUpdate={props.onChange}
           id="progress"
           class="progress"
           type="range"
@@ -37,7 +34,7 @@ export default function Controls(props) {
           step="1"
           min="0"
           max="100"
-          // onChange={onChange}
+          onChange={props.onChange}
         />
       </div>
     </div>

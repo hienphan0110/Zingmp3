@@ -1,7 +1,4 @@
-import React from "react";
-import Listsongs from "../components/Listsongs";
-import MusicItemView from "../components/MusicItemView";
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaMicrophone, FaHeart, FaEllipsisH } from "react-icons/fa";
 import PlayerDetails from "../components/PlayerDetails";
 
@@ -53,11 +50,9 @@ export default function Canhan(props) {
                 return (
                   <div
                     className={
-                      props.songs[props.currentSongIndex] === item
-                        ? "list-item active"
-                        : "list-item"
+                      props.song === item ? "list-item active" : "list-item"
                     }
-                    onClick={() => item}
+                    onClick={() => props.setSong(item)}
                   >
                     <PlayerDetails song={item} />
                     <div className="item-content">
