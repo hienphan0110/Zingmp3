@@ -13,7 +13,7 @@ function App() {
     {
       name: "Tự Em Đa Tình",
       singer: "Quinn",
-      path: "//mp3-s1-m-zmp3.zadn.vn/6d14322e1868f136a879/2419112025626696242?authen=exp=1637037729~acl=/6d14322e1868f136a879/*~hmac=adb26cb072e539ffbc56ff8807fc3bc0&fs=MTYzNjg2NDkyOTUxM3x3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      path: "https://vnso-zn-24-tf-mp3-s1-m-zmp3.zadn.vn/6d14322e1868f136a879/2419112025626696242?authen=exp=1637220085~acl=/6d14322e1868f136a879/*~hmac=7708c6e3dba6901ec43924eb0da4fa40&fs=MTYzNzA0NzI4NjAxNHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/0/5/d/2/05d288a21458ea7c380c97b4c27aab12.jpg?fs=MTYzNTQyMjIxNjM0MHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
@@ -34,28 +34,28 @@ function App() {
     {
       name: "Closer",
       singer: "The Chainsmokers, Halsey",
-      path: "https://vnso-zn-23-tf-mp3-s1-m-zmp3.zadn.vn/7d26ad071440fd1ea451/2912325423409613368?authen=exp=1636981389~acl=/7d26ad071440fd1ea451/*~hmac=f8c26246896519d9917a02764061881e&fs=MTYzNjgwODU4OTE5OHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      path: "//mp3-s1-m-zmp3.zadn.vn/7d26ad071440fd1ea451/2912325423409613368?authen=exp=1637220171~acl=/7d26ad071440fd1ea451/*~hmac=f86c112ddfd4fd9cb463ddf7af977e22&fs=MTYzNzA0NzM3MTIxMHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/1/4/b/8/14b821f4a28b17d0ebef3b9a2026d71c.jpg?fs=MTYzNjUzNTgzNzA3OHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
     {
       name: "OK",
       singer: "Binz",
-      path: "https://vnso-zn-10-tf-mp3-s1-m-zmp3.zadn.vn/4a94a118835f6a01334e/5112995764508793515?authen=exp=1636981455~acl=/4a94a118835f6a01334e/*~hmac=3683f6aa690194bb743fcd74e1064026&fs=MTYzNjgwODY1NTE0MXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      path: "//mp3-s1-m-zmp3.zadn.vn/4a94a118835f6a01334e/5112995764508793515?authen=exp=1637220221~acl=/4a94a118835f6a01334e/*~hmac=f11b60808be62767b5050ce640559bf0&fs=MTYzNzA0NzQyMTY3OXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/0/7/2/b/072ba9ae04687203d6f6af8e526ce631.jpg?fs=MTYzNTQyNDMxODI3Nnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
     {
       name: "Downtown",
       singer: "Allie X",
-      path: "https://vnso-zn-15-tf-mp3-s1-m-zmp3.zadn.vn/7214b78dbccb55950cda/7291770380676333755?authen=exp=1636981539~acl=/7214b78dbccb55950cda/*~hmac=33651caa0cfd4da7619e86760d79aeb3&fs=MTYzNjgwODmUsICzOTI2OXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      path: "https://vnso-zn-15-tf-mp3-s1-m-zmp3.zadn.vn/7214b78dbccb55950cda/7291770380676333755?authen=exp=1637220274~acl=/7214b78dbccb55950cda/*~hmac=fb5fbcaa23fdb1cc2bd2db23921f9f6a&fs=MTYzNzA0NzQ3NDk5Mnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/d/7/6/1/d76178c5ff308509433798be38c034c2.jpg?fs=MTYzNjUzNjU1OTkxN3x3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
     {
       name: "Love Me Love Me",
       singer: "Winner",
-      path: "https://vnso-zn-5-tf-mp3-s1-m-zmp3.zadn.vn/abb9b547b900505e0911/3721950449131877428?authen=exp=1636981612~acl=/abb9b547b900505e0911/*~hmac=c879462a1cd659ca2eb05499f269ef9f&fs=MTYzNjgwODgxMjE3M3x3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      path: "//mp3-s1-m-zmp3.zadn.vn/abb9b547b900505e0911/3721950449131877428?authen=exp=1637220340~acl=/abb9b547b900505e0911/*~hmac=a5bff40a4d97e2cde3e0ee3ef2a8e31f&fs=MTYzNzA0NzU0MDEyNHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/e/5/f/b/e5fb7d2e5f69d14ab3553d3e67181575.jpg?fs=MTYzNTQyNDU1NjmUsICzNnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
@@ -95,7 +95,7 @@ function App() {
         />
 
         <Switch>
-          <Route path="/" exact>
+          <Route path="/canhan" exact>
             <Canhan
               song={song}
               setSong={setSong}
@@ -104,7 +104,7 @@ function App() {
               setCurrentSongIndex={setCurrentSongIndex}
             />
           </Route>
-          <Route path="/khampha">
+          <Route path="/Zingmp3">
             <Khampha />
           </Route>
         </Switch>

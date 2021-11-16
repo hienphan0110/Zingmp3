@@ -16,6 +16,7 @@
       .sidebar__nav-list {
         list-style: none;
         .sidebar__nav-item {
+          cursor: pointer;
           a {
             @include flex;
             justify-content: start;
@@ -46,6 +47,7 @@
       .sidebar__music-list {
         list-style: none;
         .sidebar__music-item {
+          cursor: pointer;
           a {
             @include flex;
             justify-content: start;

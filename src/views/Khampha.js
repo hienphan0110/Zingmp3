@@ -150,7 +150,7 @@ export default function KhamPha() {
             <div className="musicItemOverlay">
               <div className="icon-overlay">
                 <FavoriteBorder></FavoriteBorder>
-                <PlayCircleOutline></PlayCircleOutline>
+                <PlayCircleOutline className="playCircle"></PlayCircleOutline>
                 <MoreHoriz></MoreHoriz>
               </div>
             </div>

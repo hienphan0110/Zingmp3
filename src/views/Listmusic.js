@@ -2,19 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import PlayerDetails from "../components/PlayerDetails";
 
 export default function Listmusic(props) {
-  // const handlell = (e) => {
-  //   if (e.target.closest(".song:not(.active)")) {
-  //   }
-  // };
-
-  // const [songActive, setSongActive] = useState(false);
-  // let classes = "song";
-  // if (songActive) {
-  //   classes += " active";
-  // }
-  // console.log(props.setSong);
-  // const [song, setSong] = useState(props.songs[props.currentSongIndex]);
-  // console.log(song);
   return (
     <div className="listmusic">
       <div className="listmusic__tab">

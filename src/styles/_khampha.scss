@@ -5,16 +5,15 @@
   padding-top: 52px;
   .container {
     padding: 32px 69px 92px 0px;
-    // display: flex;
     .slick-slider {
       .slick-list {
         height: 200px;
+        margin-left: 15px;
         .slick-slide {
-          padding: 0 10px;
           .slick-img {
             cursor: pointer;
             img {
-              width: 100%;
+              width: 96%;
               border-radius: 10px;
             }
           }
@@ -34,7 +33,6 @@
         .item {
           padding: 10px;
           .musicItemView {
-            // transition: 0.5s ease;
             cursor: pointer;
             position: relative;
             img {
@@ -58,8 +56,11 @@
                 align-items: center;
                 opacity: 0;
                 svg {
-                  font-size: 34px;
+                  font-size: 22px;
                   padding: 8px;
+                }
+                .playCircle {
+                  font-size: 50px;
                 }
               }
             }

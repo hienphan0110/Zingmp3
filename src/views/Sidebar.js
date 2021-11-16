@@ -21,34 +21,34 @@ export default function Sidebar() {
         <div className="sidebar__nav">
           <ul className="sidebar__nav-list">
             <li className="sidebar__nav-item">
-              <NavLink activeClassName="active" exact to="/">
+              <NavLink activeClassName="active" exact to="/canhan">
                 <FaPortrait />
                 <span>Cá Nhân</span>
               </NavLink>
             </li>
             <li className="sidebar__nav-item">
-              <NavLink activeClassName="active" to="/khampha">
+              <NavLink activeClassName="active" to="/Zingmp3">
                 <FaRecordVinyl />
                 <span>Khám Phá</span>
               </NavLink>
             </li>
             <li className="sidebar__nav-item">
-              <NavLink activeClassName="active" to="/zingchart">
+              <a activeClassName="active" to="/zingchart">
                 <FaChartLine />
                 <span>#zingchart</span>
-              </NavLink>
+              </a>
             </li>
             <li className="sidebar__nav-item">
-              <NavLink activeClassName="active" to="/radio">
+              <a activeClassName="active" to="/radio">
                 <FaHeadphonesAlt />
                 <span>Radio</span>
-              </NavLink>
+              </a>
             </li>
             <li className="sidebar__nav-item">
-              <NavLink activeClassName="active" to="/theodoi">
+              <a activeClassName="active" to="/theodoi">
                 <FaRssSquare />
                 <span>Theo Dõi</span>
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>
@@ -56,28 +56,28 @@ export default function Sidebar() {
         <div className="sidebar__music">
           <ul className="sidebar__music-list">
             <li className="sidebar__music-item">
-              <NavLink activeClassName="active1" to="/nhacmoi">
+              <a activeClassName="active1" to="/nhacmoi">
                 <FaPortrait />
                 <span>Nhạc Mới</span>
-              </NavLink>
+              </a>
             </li>
             <li className="sidebar__music-item">
-              <NavLink activeClassName="active1" to="/theloai">
+              <a activeClassName="active1" to="/theloai">
                 <FaRecordVinyl />
                 <span>Thể Loại</span>
-              </NavLink>
+              </a>
             </li>
             <li className="sidebar__music-item">
-              <NavLink activeClassName="active1" to="/top100">
+              <a activeClassName="active1" to="/top100">
                 <FaChartLine />
                 <span>Top 100</span>
-              </NavLink>
+              </a>
             </li>
             <li className="sidebar__music-item">
-              <NavLink activeClassName="active1" to="/mv">
+              <a activeClassName="active1" to="/mv">
                 <FaHeadphonesAlt />
                 <span>MV</span>
-              </NavLink>
+              </a>
             </li>
           </ul>
           <div className="vip-banner-sidebar">
