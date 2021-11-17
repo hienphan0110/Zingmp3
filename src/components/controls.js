@@ -30,11 +30,11 @@ export default function Controls(props) {
           id="progress"
           class="progress"
           type="range"
-          // value="0"
+          value="0"
           step="1"
           min="0"
           max="100"
-          onChange={props.onChange}
+          // onChange={props.onChange}
         />
       </div>
     </div>

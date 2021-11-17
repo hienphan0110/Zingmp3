@@ -20,7 +20,7 @@ function App() {
     {
       name: "Tát Nước Đầu Đình",
       singer: "Lynk Lee, Binz",
-      path: "//mp3-s1-m-zmp3.zadn.vn/d47c4eca478eaed0f79f/655168355244407679?authen=exp=1637119296~acl=/d47c4eca478eaed0f79f/*~hmac=00b463c918201ce2fe03e91641ad352f&fs=MTYzNjk0NjQ5Njg5OXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      path: "//mp3-s1-m-zmp3.zadn.vn/d47c4eca478eaed0f79f/655168355244407679?authen=exp=1637293840~acl=/d47c4eca478eaed0f79f/*~hmac=566ad83c6bf36e30416e5f6b225af038&fs=MTYzNzEyMTA0MDmUsIC0MXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/covers/5/b/5b0e1e9f8bc5a40c9062cc20ef85929d_1441510933.jpg?fs=MTYzNTkzNTA1MDEzNnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
@@ -59,6 +59,13 @@ function App() {
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/e/5/f/b/e5fb7d2e5f69d14ab3553d3e67181575.jpg?fs=MTYzNTQyNDU1NjmUsICzNnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
+    {
+      name: "Bao Tiền Một Mớ Bình Yên?",
+      singer: "14 Casper, Bon",
+      path: "//mp3-s1-m-zmp3.zadn.vn/d80ca7683a2fd3718a3e/202014890748971286?authen=exp=1637257319~acl=/d80ca7683a2fd3718a3e/*~hmac=4d16047576000bb927aa3e41539fcc9a&fs=MTYzNzA4NDUxOTEwOXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      image:
+        "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/1/c/3/b/1c3b6283e28b9030d8f6410b210bd765.jpg?fs=MTYzNzA4NDUxOTEwOHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+    },
   ]);
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -79,13 +86,7 @@ function App() {
       <div className="App">
         <Header />
         <Sidebar />
-        <Listmusic
-          song={song}
-          setSong={setSong}
-          songs={songs}
-          currentSongIndex={currentSongIndex}
-          setCurrentSongIndex={setCurrentSongIndex}
-        />
+        <Listmusic song={song} setSong={setSong} songs={songs} />
         <Footer
           song={song}
           setSong={setSong}

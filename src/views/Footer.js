@@ -49,12 +49,7 @@ export default function Footer(props) {
     <div className="footer">
       <div className="player">
         <audio id="audio" src={props.song.path} ref={audioEl}></audio>
-        <PlayerDetails
-          // song={props.song}
-          isPlaying={isPlaying}
-          setIsPlaying={setIsPlaying}
-          song={props.song}
-        />
+        <PlayerDetails isPlaying={isPlaying} song={props.song} />
 
         <Controls
           isPlaying={isPlaying}
