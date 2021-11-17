@@ -11,6 +11,8 @@
     }
   }
   &__menu {
+    overflow: auto;
+    height: calc(100% - 180px);
     .sidebar__nav {
       margin-bottom: 18px;
       .sidebar__nav-list {
@@ -102,5 +104,8 @@
         }
       }
     }
+  }
+  &__menu::-webkit-scrollbar {
+    width: 3px;
   }
 }
