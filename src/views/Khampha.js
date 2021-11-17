@@ -7,7 +7,7 @@ import PlayCircleOutline from "@mui/icons-material/PlayCircleOutline";
 import MoreHoriz from "@mui/icons-material/MoreHoriz";
 
 export default function KhamPha() {
-  const [state, setState] = useState({
+  const [state] = useState({
     data: [
       {
         img: "https://photo-zmp3.zadn.vn/banner/9/e/d/4/9ed43e634c21551d8c8c75cddf1c6798.jpg",
@@ -138,6 +138,38 @@ export default function KhamPha() {
         author: "Tuimi,16 Typh,Đạt G,...",
       },
     ],
+    dataFt: [
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/orcahrd.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/yg.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/SM-Entertainment.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/FUGA.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/monstercat.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/universal-1.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/sony.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/Kakao-M.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/beggers.png",
+      },
+      {
+        img: "https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/partner_logo/empire.png",
+      },
+    ],
   });
 
   //   gan day
@@ -182,6 +214,17 @@ export default function KhamPha() {
       );
     });
   };
+  const renderDataFt = (items) => {
+    return items.map((item, index) => {
+      return (
+        <div className="footer-img">
+          <div className="img">
+            <img src={item.img} alt={"ff"} />
+          </div>
+        </div>
+      );
+    });
+  };
   //   co the ban muon Nghe
   return (
     <div className="khamPhaContent">
@@ -214,6 +257,12 @@ export default function KhamPha() {
             {" "}
             {renderDataView(state.dataView.slice(15, 20))}
           </div>
+        </div>
+        <div className="section-footer">
+          <div className="title">
+            <span>Đối Tác Âm Nhạc</span>
+          </div>
+          <div className="content">{renderDataFt(state.dataFt)}</div>
         </div>
       </div>
     </div>

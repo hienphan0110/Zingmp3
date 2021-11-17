@@ -88,5 +88,43 @@
         }
       }
     }
+    .section-footer {
+      margin: 20px 0;
+      .title {
+        color: #ccc;
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 20px 0;
+      }
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        .footer-img {
+          display: flex;
+          justify-content: center;
+          width: 12.5%;
+          padding: 10px;
+          .img {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+            height: 40px;
+            width: 100%;
+            cursor: pointer;
+            img {
+              max-width: 90%;
+              max-height: 80%;
+            }
+          }
+        }
+      }
+    }
   }
 }
