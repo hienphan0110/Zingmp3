@@ -60,7 +60,7 @@ export default function KhamPha() {
       {
         img: "		https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/6/2/5/e/625eb87fe88f342859dd1197e60238ff.jpg",
         title: "Trào Lưu Nhạc Hot",
-        author: "Nal, The Kid LAROI, Pháo",
+        author: "Nal, Pháo",
       },
       {
         img: "	https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/f/7/4/5/f7452c4bab07a4cfd39c388e73a13922.jpg",
@@ -75,7 +75,7 @@ export default function KhamPha() {
       {
         img: "	https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/1/2/6/5/1265e63c52f33a8075b143e2cd3e52ca.jpg",
         title: "Song Ca Hay Nhất",
-        author: "Tăng Phúc, Hương Ly, Trịnh Thăng Bình,...",
+        author: "Tăng Phúc, Trịnh Thăng Bình,...",
       },
       {
         img: "	https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/b/b/1/9/bb19d3533ae913605e676538c19364cb.jpg",
@@ -114,23 +114,23 @@ export default function KhamPha() {
       // ===========================================================================
       {
         img: "	https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/b/b/1/9/bb19d3533ae913605e676538c19364cb.jpg",
-        title: "Nhạc Việt Hôm Nay Nghe Gì?",
-        author: "Quân A.P,Orange,Lê Bảo Bình,...",
+        title: "Hôm Nay Nghe Gì?",
+        author: "Quân A.P, Orange,...",
       },
       {
         img: "	https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/6/0/4/b/604b8492359973ffa7ff6d2059e20e7e.jpg",
-        title: "Chạm: Đâu Ai Bình Thường Khi Yêu",
-        author: "HURRYKNG,dính,Phương Ly,...",
+        title: "Đâu Ai Bình Thường Khi Yêu",
+        author: "HURRYKNG, Phương Ly,...",
       },
       {
         img: "	https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/0/3/8/9/0389d21f1cd10834593a3b8ac133f41d.jpg",
         title: "Pop Chill",
-        author: "Olivia Rodrigo,Tate McRae,Khalid,...",
+        author: "Olivia Rodrigo, Khalid,...",
       },
       {
         img: "		https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/e/d/8/b/ed8b6074b8bacbb40b3af6821e01b0ee.jpg",
         title: "K-Pop Ballad",
-        author: "Mamamoo,AKMU,Davichi,...",
+        author: "Mamamoo, Davichi,...",
       },
       {
         img: "https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/7/2/d/0/72d067aa555641c89ac84ff9e3397c42.jpg",
