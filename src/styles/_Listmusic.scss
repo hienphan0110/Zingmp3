@@ -18,6 +18,9 @@
   }
   &__content {
     cursor: pointer;
+    overflow: auto;
+    height: calc(100% - 180px);
+
     .song {
       display: flex;
       align-items: center;
@@ -52,5 +55,8 @@
     .song.active {
       background-color: $purple__3;
     }
+  }
+  &__content::-webkit-scrollbar {
+    width: 3px;
   }
 }

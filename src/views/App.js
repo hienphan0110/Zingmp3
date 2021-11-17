@@ -5,7 +5,7 @@ import Canhan from "./Canhan";
 import Khampha from "./Khampha";
 import Listmusic from "./Listmusic";
 import Footer from "./Footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -66,43 +66,114 @@ function App() {
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/1/c/3/b/1c3b6283e28b9030d8f6410b210bd765.jpg?fs=MTYzNzA4NDUxOTEwOHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
+    {
+      name: "Goodbye Road",
+      singer: "iKON",
+      path: "//mp3-s1-m-zmp3.zadn.vn/f32f03df0f98e6c6bf89/7837165587446028807?authen=exp=1637313877~acl=/f32f03df0f98e6c6bf89/*~hmac=77d8b776b57d2b1e9f03d220f52a558c&fs=MTYzNzE0MTA3NzY3NHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      image:
+        "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/4/9/7/8/497838480a984a04dfff7a0667da5d75.jpg?fs=MTYzNzE0MTA3NzY2OXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+    },
+    {
+      name: "Body",
+      singer: "Mino",
+      path: "//mp3-s1-m-zmp3.zadn.vn/e9700b8107c6ee98b7d7/5517625227181620180?authen=exp=1637314030~acl=/e9700b8107c6ee98b7d7/*~hmac=eb9844a59d35be7a214f61d85d5f10ce&fs=MTYzNzE0MTIzMDmUsICzN3x3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      image:
+        "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/3/8/1/4/381450fa1bf53dcb9284cc5f73c70e6c.jpg?fs=MTYzNzE0MTIzMDmUsICzNnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+    },
+    {
+      name: "Vẫn Nhớ",
+      singer: "SOOBIN",
+      path: "//mp3-s1-m-zmp3.zadn.vn/f165a2b5a3f24aac13e3/596551588438777438?authen=exp=1637314244~acl=/f165a2b5a3f24aac13e3/*~hmac=37b344a6e51ca133fab67abac0d44660&fs=MTYzNzE0MTQ0NDQ3Mnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      image:
+        "https://photo-resize-zmp3.zadn.vn/w94_r1x1_webp/cover/c/b/1/a/cb1af5489be93740538b70e49e919f7b.jpg",
+    },
+    {
+      name: "Blue",
+      singer: "Big Bang",
+      path: "//mp3-s1-m-zmp3.zadn.vn/9c40513a547ebd20e46f/7468083091498594488?authen=exp=1637314456~acl=/9c40513a547ebd20e46f/*~hmac=def68b5e0a62d2e6dfcb4275b064f77b&fs=MTYzNzE0MTY1NjmUsIC2OXx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      image:
+        "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/covers/7/5/75f29937b8cdee5fc152ace3122ecd01_1329874830.jpg?fs=MTYzNzEzODmUsIC4NzE2MXx3ZWJWNHwxNTAdUngOTUdUngMTEwLjE3Mg",
+    },
   ]);
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
-  const [song, setSong] = useState(songs[0]);
+  // const [song, setSong] = useState(songs[currentSongIndex]);
+
+  // useEffect(() => {
+  //   setNextSongIndex(() => {
+  //     if (currentSongIndex + 1 > songs.length - 1) {
+  //       return 0;
+  //     } else {
+  //       return currentSongIndex + 1;
+  //     }
+  //   });
+  // }, [currentSongIndex]);
+
+  const SkipSong = (forwards = true) => {
+    if (forwards) {
+      setCurrentSongIndex(() => {
+        let temp = currentSongIndex;
+        temp++;
+        if (temp > songs.length - 1) {
+          temp = 0;
+        }
+        return temp;
+      });
+    } else {
+      setCurrentSongIndex(() => {
+        let temp = currentSongIndex;
+        temp--;
+
+        if (temp < 0) {
+          temp = songs.length - 1;
+        }
+        return temp;
+      });
+    }
+  };
+
+  const audioEl = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    setNextSongIndex(() => {
-      if (currentSongIndex + 1 > songs.length - 1) {
-        return 0;
-      } else {
-        return currentSongIndex + 1;
-      }
-    });
-  }, [currentSongIndex]);
+    isPlaying ? audioEl.current.play() : audioEl.current.pause();
+  });
+  const handlePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
   return (
     <BrowserRouter>
       <div className="App">
+        <audio
+          id="audio"
+          src={songs[currentSongIndex].path}
+          ref={audioEl}
+        ></audio>
         <Header />
         <Sidebar />
-        <Listmusic song={song} setSong={setSong} songs={songs} />
+        <Listmusic
+          song={songs[currentSongIndex]}
+          // setSong={songs[setCurrentSongIndex]}
+          songs={songs}
+        />
         <Footer
-          song={song}
-          setSong={setSong}
           currentSongIndex={currentSongIndex}
           setCurrentSongIndex={setCurrentSongIndex}
           songs={songs}
+          SkipSong={SkipSong}
+          handlePlay={handlePlay}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
         />
 
         <Switch>
           <Route path="/canhan" exact>
             <Canhan
-              song={song}
-              setSong={setSong}
               songs={songs}
               currentSongIndex={currentSongIndex}
               setCurrentSongIndex={setCurrentSongIndex}
+              song={songs[currentSongIndex]}
             />
           </Route>
           <Route path="/Zingmp3">

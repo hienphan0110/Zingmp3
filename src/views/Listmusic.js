@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PlayerDetails from "../components/PlayerDetails";
 
 export default function Listmusic(props) {
@@ -11,10 +11,7 @@ export default function Listmusic(props) {
       <div className="listmusic__content">
         {props.songs.map((item) => {
           return (
-            <div
-              className={props.song === item ? "song active" : "song"}
-              onClick={() => props.setSong(item)}
-            >
+            <div className={props.song === item ? "song active" : "song"}>
               <PlayerDetails song={item} />
             </div>
           );
