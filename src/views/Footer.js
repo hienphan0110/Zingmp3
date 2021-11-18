@@ -20,7 +20,6 @@ export default function Footer(props) {
       (audioEl.current.currentTime / audioEl.current.duration) * 100
     );
   };
-
   const SkipSong = (forwards = true) => {
     if (forwards) {
       props.setCurrentSongIndex(() => {

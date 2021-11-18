@@ -7,13 +7,14 @@ import Listmusic from "./Listmusic";
 import Footer from "./Footer";
 import { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import tuemdatinh from "../assets/music/song1.mp3";
 
 function App() {
   const [songs] = useState([
     {
       name: "Tự Em Đa Tình",
       singer: "Quinn",
-      path: "//mp3-s1-m-zmp3.zadn.vn/6d14322e1868f136a879/2419112025626696242?authen=exp=1637394817~acl=/6d14322e1868f136a879/*~hmac=ed66540c6cb747d997777e002fdbef41&fs=MTYzNzIyMjAxNzmUsIC1Mnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+      path: tuemdatinh,
       image:
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/0/5/d/2/05d288a21458ea7c380c97b4c27aab12.jpg?fs=MTYzNTQyMjIxNjM0MHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
