@@ -53,7 +53,7 @@ export default function Footer(props) {
           onTimeUpdate={onPlaying}
         ></audio>
         <PlayerDetails
-          isPlaying={props.isPlaying}
+          isPlaying={isPlaying}
           song={props.songs[props.currentSongIndex]}
         />
         <Controls
