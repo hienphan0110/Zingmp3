@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import tuemdatinh from "../assets/music/song1.mp3";
-import alone from "../assets/music/alone.mp3";
+import withyou from "../assets/music/withyou.mp3";
 import baotienmotmobinhyen from "../assets/music/baotienmotmobinhyen.mp3";
 import blue from "../assets/music/blue.mp3";
 import bluekeshi from "../assets/music/blue-lyric-video.mp3";
@@ -44,11 +44,11 @@ function App() {
         "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/covers/5/b/5b0e1e9f8bc5a40c9062cc20ef85929d_1441510933.jpg?fs=MTYzNTkzNTA1MDEzNnx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
     },
     {
-      name: "Alone, Pt. II",
-      singer: "Alan Walker, Ava Max",
-      path: alone,
+      name: "With You (Ngẫu Hứng)",
+      singer: "HOAPROX",
+      path: withyou,
       image:
-        "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/d/2/0/d/d20dbb6279610c6ccf856f08c30a3d5c.jpg?fs=MTYzNjQzMzmUsIC4MTQ0OHx3ZWJWNHwxNzEdUngMjI3LjI0My40Nw",
+        "https://photo-resize-zmp3.zadn.vn/w94_r1x1_webp/cover/5/c/f/f/5cffbc808c999aaee75986f27e2918e4.jpg",
     },
     {
       name: "Closer",
