@@ -97,74 +97,17 @@ function App() {
   ]);
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
-  // const [song, setSong] = useState(songs[currentSongIndex]);
 
-  // useEffect(() => {
-  //   setNextSongIndex(() => {
-  //     if (currentSongIndex + 1 > songs.length - 1) {
-  //       return 0;
-  //     } else {
-  //       return currentSongIndex + 1;
-  //     }
-  //   });
-  // }, [currentSongIndex]);
-
-  const SkipSong = (forwards = true) => {
-    if (forwards) {
-      setCurrentSongIndex(() => {
-        let temp = currentSongIndex;
-        temp++;
-        if (temp > songs.length - 1) {
-          temp = 0;
-        }
-        return temp;
-      });
-    } else {
-      setCurrentSongIndex(() => {
-        let temp = currentSongIndex;
-        temp--;
-
-        if (temp < 0) {
-          temp = songs.length - 1;
-        }
-        return temp;
-      });
-    }
-  };
-
-  const audioEl = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  useEffect(() => {
-    isPlaying ? audioEl.current.play() : audioEl.current.pause();
-  });
-  const handlePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
   return (
     <BrowserRouter>
       <div className="App">
-        <audio
-          id="audio"
-          src={songs[currentSongIndex].path}
-          ref={audioEl}
-        ></audio>
         <Header />
         <Sidebar />
-        <Listmusic
-          song={songs[currentSongIndex]}
-          // setSong={songs[setCurrentSongIndex]}
-          songs={songs}
-        />
+        <Listmusic song={songs[currentSongIndex]} songs={songs} />
         <Footer
           currentSongIndex={currentSongIndex}
           setCurrentSongIndex={setCurrentSongIndex}
           songs={songs}
-          SkipSong={SkipSong}
-          handlePlay={handlePlay}
-          isPlaying={isPlaying}
-          setIsPlaying={setIsPlaying}
         />
 
         <Switch>

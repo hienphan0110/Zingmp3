@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PlayerDetails from "../components/PlayerDetails";
 
 export default function Listmusic(props) {

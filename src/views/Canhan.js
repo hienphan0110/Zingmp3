@@ -52,7 +52,6 @@ export default function Canhan(props) {
                     className={
                       props.song === item ? "list-item active" : "list-item"
                     }
-                    // onClick={() => props.setSong(item)}
                   >
                     <PlayerDetails song={item} />
                     <div className="item-content">

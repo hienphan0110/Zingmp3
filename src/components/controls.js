@@ -26,15 +26,19 @@ export default function Controls(props) {
       </div>
       <div className="progresss">
         <input
-          // onTimeUpdate={props.onChange}
           id="progress"
           class="progress"
           type="range"
-          value="0"
+          value={props.seekValue}
           step="1"
           min="0"
           max="100"
-          // onChange={props.onChange}
+          onChange={(e) => {
+            const seekto =
+              props.audioEl.current.duration * (+e.target.value / 100);
+            props.audioEl.current.currentTime = seekto;
+            props.setSeekValue(e.target.value);
+          }}
         />
       </div>
     </div>
