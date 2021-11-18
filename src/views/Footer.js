@@ -66,6 +66,7 @@ export default function Footer(props) {
           seekValue={seekValue}
           setSeekValue={setSeekValue}
           audioEl={audioEl}
+          currentTime={currentTime}
         />
         <div className="footer__right">
           <FaFilm className="btn-film" />
