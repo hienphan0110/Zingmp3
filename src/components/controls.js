@@ -29,7 +29,7 @@ export default function Controls(props) {
           id="progress"
           class="progress"
           type="range"
-          value={props.seekValue}
+          value={props.seekValue || 0}
           step="1"
           min="0"
           max="100"
