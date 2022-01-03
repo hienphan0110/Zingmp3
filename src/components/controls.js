@@ -3,6 +3,7 @@ import { FaRandom, FaRedo, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
+import moment from "moment";
 
 export default function Controls(props) {
   return (
@@ -25,6 +26,7 @@ export default function Controls(props) {
         </div>
       </div>
       <div className="progresss">
+        <span>{moment.utc(props.currentTime * 1000).format("mm:ss")}</span>
         <input
           id="progress"
           class="progress"
@@ -40,6 +42,7 @@ export default function Controls(props) {
             props.setSeekValue(e.target.value);
           }}
         />
+        <span>{moment.utc(props.duration * 1000).format("mm:ss")}</span>
       </div>
     </div>
   );

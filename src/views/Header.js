@@ -67,10 +67,6 @@ export default function Header() {
   // const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  // const handleProfileMenuOpen = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // };
-
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
   };
@@ -139,7 +135,7 @@ export default function Header() {
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
-                placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV..."
+                placeholder="Nhập tên bài hát..."
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>
