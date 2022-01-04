@@ -3,7 +3,6 @@ import PlayerDetails from "../components/PlayerDetails";
 import Controls from "../components/controls";
 import { FaFilm, FaMicrophone } from "react-icons/fa";
 import { connect } from "react-redux";
-import ReactAudioPlayer from "react-audio-player";
 
 function Footer(props) {
   const audioEl = useRef(null);
