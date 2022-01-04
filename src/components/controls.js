@@ -43,6 +43,7 @@ export default function Controls(props) {
           }}
         />
         <span>{moment.utc(props.duration * 1000).format("mm:ss")}</span>
+        <span>{moment.utc(props.duration * 1000).format("mm:ss")}</span>
       </div>
     </div>
   );
