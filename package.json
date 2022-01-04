@@ -2,7 +2,7 @@
   "name": "zingmp3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hienphan0110.github.io/Zingmp3",
+  "homepage": "https://phanhien0110.github.io/Zingmp3",
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
