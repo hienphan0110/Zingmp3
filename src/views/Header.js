@@ -142,11 +142,7 @@ export default function Header() {
 
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <IconButton
-                size="large"
-                // aria-label="show 4 new mails"
-                color="inherit"
-              >
+              <IconButton size="large" color="inherit">
                 <UploadIcon />
               </IconButton>
               <IconButton
