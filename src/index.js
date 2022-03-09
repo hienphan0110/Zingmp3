@@ -4,13 +4,11 @@ import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
 
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import rootReducer from "./store/reducers/rootReducer";
-
-const reduxStore = createStore(rootReducer);
+// import { createStore } from "redux";
+import { store } from "./redux/store";
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={reduxStore}>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,

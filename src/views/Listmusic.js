@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PlayerDetails from "../components/PlayerDetails";
+import { useDispatch, useSelector } from "react-redux";
+import { listSongs } from "../redux/actions/action";
 
-export default function Listmusic(props) {
+export default function Listmusic() {
+  const { listSong } = useSelector((state) => state.songReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listSongs());
+  }, [dispatch]);
   return (
     <div className="listmusic">
       <div className="listmusic__tab">
@@ -9,11 +16,9 @@ export default function Listmusic(props) {
         <span className="listmusic__tab-item">Nghe gần đây</span>
       </div>
       <div className="listmusic__content">
-        {props.songs.map((item) => {
+        {listSong.map((item, index) => {
           return (
-            <div className={props.song === item ? "song active" : "song"}>
-              <PlayerDetails song={item} />
-            </div>
+            <PlayerDetails listSong={listSong} item={item} index={index} />
           );
         })}
       </div>

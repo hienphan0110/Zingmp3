@@ -208,7 +208,7 @@ export default function KhamPha() {
   const renderData = (items) => {
     return items.map((item, index) => {
       return (
-        <div className="slick-img">
+        <div className="slick-img" key={index}>
           <img src={item.img} alt={"ff"} />
         </div>
       );
@@ -217,7 +217,7 @@ export default function KhamPha() {
   const renderDataFt = (items) => {
     return items.map((item, index) => {
       return (
-        <div className="footer-img">
+        <div className="footer-img" key={index}>
           <div className="img">
             <img src={item.img} alt={"ff"} />
           </div>

@@ -1,35 +1,38 @@
-import React from "react";
-import { useSpring, animated } from "react-spring";
+import React, { useEffect } from "react";
+import { getSongDetailAction } from "../redux/actions/action";
+import { useDispatch, useSelector } from "react-redux";
 
 function PlayerDetails(props) {
-  const spring = useSpring({
-    loop: true,
-    from: {
-      transform: "rotate(0deg)",
-    },
-    to: {
-      transform: "rotate(360deg)",
-    },
-    config: {
-      duration: 3500,
-    },
-  });
+  const { songDetail } = useSelector((state) => state.songReducer);
+  const dispatch = useDispatch();
+  const { item, index, listSong } = props;
+  useEffect(() => {
+    dispatch(getSongDetailAction());
+  }, []);
+
+  useEffect(() => {
+    if (item.id === listSong[0].id) {
+      dispatch(getSongDetailAction(listSong[0]));
+    }
+  }, []);
   return (
-    <div className="details">
-      <div className="details-img">
-        <animated.img
-          src={props.song.image}
-          className="aa"
-          alt=""
-          style={props.isPlaying ? spring : {}}
-        ></animated.img>
-      </div>
-      <div className="details-title">
-        <h3>{props.song.name}</h3>
-        <p>{props.song.singer}</p>
+    <div
+      className={item.id === songDetail.id ? "song active" : "song"}
+      key={index}
+      onClick={() => {
+        dispatch(getSongDetailAction(item));
+      }}
+    >
+      <div className="details">
+        <div className="details-img">
+          <img src={item.thumbnail} className="aa" alt=""></img>
+        </div>
+        <div className="details-title">
+          <h3>{item.name}</h3>
+          <p>{item.artists_names}</p>
+        </div>
       </div>
     </div>
   );
 }
-
 export default PlayerDetails;

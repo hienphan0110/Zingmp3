@@ -59,7 +59,7 @@
           }
         }
         .music-view {
-          .list-item {
+          .song {
             display: flex;
             justify-content: space-between;
             margin: 16px 58px 16px 8px;
@@ -91,25 +91,25 @@
                 }
               }
             }
-            .item-content {
-              color: #ccc;
-            }
-            .item-right {
-              color: #ccc;
-              width: 30%;
-              .level {
-                text-align: right;
-                svg {
-                  padding: 0 12px;
-                  cursor: pointer;
-                }
-                .icon-heart {
-                  color: $purple__3;
-                }
+          }
+          .item-content {
+            color: #ccc;
+          }
+          .item-right {
+            color: #ccc;
+            width: 30%;
+            .level {
+              text-align: right;
+              svg {
+                padding: 0 12px;
+                cursor: pointer;
+              }
+              .icon-heart {
+                color: $purple__3;
               }
             }
           }
-          .list-item.active {
+          .song.active {
             background-color: $purple__3;
             border-radius: 5px;
             .item-right {

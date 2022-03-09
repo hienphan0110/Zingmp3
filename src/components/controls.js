@@ -1,6 +1,5 @@
 import React from "react";
 import { FaRandom, FaRedo, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";

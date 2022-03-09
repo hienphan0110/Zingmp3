@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaMicrophone, FaHeart, FaEllipsisH } from "react-icons/fa";
+import { useSelector } from "react-redux";
+// import { FaMicrophone, FaHeart, FaEllipsisH } from "react-icons/fa";
 import PlayerDetails from "../components/PlayerDetails";
 
 export default function Canhan(props) {
@@ -12,9 +13,8 @@ export default function Canhan(props) {
     "MV",
     "Tải Lên",
   ];
-
   const [type, setType] = useState("Bài Hát");
-
+  const { listSong } = useSelector((state) => state.songReducer);
   return (
     <div className="ca-nhan">
       <div className="info">
@@ -46,27 +46,25 @@ export default function Canhan(props) {
               <div className="header-content">Thời Gian</div>
             </div>
             <div className="music-view">
-              {props.songs.map((item) => {
+              {listSong.map((item, index) => {
                 return (
-                  <div
-                    className={
-                      props.song === item ? "list-item active" : "list-item"
-                    }
-                  >
-                    <PlayerDetails song={item} />
-                    <div className="item-content">
-                      <div className="song-duration">04:20</div>
-                    </div>
-                    <div className="item-right">
-                      <div className="level">
-                        <FaMicrophone />
-                        <FaHeart className="icon-heart" />
-                        <FaEllipsisH />
-                      </div>
-                    </div>
-                  </div>
+                  <PlayerDetails
+                    listSong={listSong}
+                    item={item}
+                    index={index}
+                  />
                 );
               })}
+              {/* <div className="item-content">
+                <div className="song-duration">04:20</div>
+              </div>
+              <div className="item-right">
+                <div className="level">
+                  <FaMicrophone />
+                  <FaHeart className="icon-heart" />
+                  <FaEllipsisH />
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
